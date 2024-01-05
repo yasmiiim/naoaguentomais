@@ -5,13 +5,19 @@ using UnityEngine;
 public class itemHeart : MonoBehaviour
 {
     public int healthValue;
+    private AudioSource sound;
 
+    private void Awake()
+    {
+        sound = GetComponent<AudioSource>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
+            sound.Play();
             collision.gameObject.GetComponent<player>().IncreaseLife(healthValue);
-            Destroy(gameObject);
+            Destroy(gameObject, 0.4f);
             
         }
     }
