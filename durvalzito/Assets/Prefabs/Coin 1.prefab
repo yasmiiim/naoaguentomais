@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8807596180404122514}
   - component: {fileID: 8807596180404122515}
   - component: {fileID: 8807596180404122512}
-  - component: {fileID: 1302533478}
+  - component: {fileID: 1280134971263735071}
   m_Layer: 0
   m_Name: Coin 1
   m_TagString: Untagged
@@ -137,7 +137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 1
---- !u!82 &1302533478
+  sound: {fileID: 1280134971263735071}
+--- !u!82 &1280134971263735071
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
