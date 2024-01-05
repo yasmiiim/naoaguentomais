@@ -5,7 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public int scoreValue;
-    private AudioSource sound;
+    public AudioSource sound;
 
 
     private void Awake()
