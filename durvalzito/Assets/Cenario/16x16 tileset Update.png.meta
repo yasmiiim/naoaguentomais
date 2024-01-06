@@ -3,7 +3,7 @@ guid: 45f6399f05ff4824592db833a42af32f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,7 +63,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -580,27 +579,27 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      16x16 tileset Update_0: -89080737
       16x16 tileset Update_1: -751225228
-      16x16 tileset Update_10: 352703567
-      16x16 tileset Update_11: 674163836
-      16x16 tileset Update_12: -1253172286
-      16x16 tileset Update_13: -525074723
-      16x16 tileset Update_14: -1246537942
       16x16 tileset Update_15: -2103887781
-      16x16 tileset Update_16: -1654476890
-      16x16 tileset Update_17: -10176991
-      16x16 tileset Update_18: -2097021699
-      16x16 tileset Update_19: -1005864698
-      16x16 tileset Update_2: -514622939
-      16x16 tileset Update_20: -1683497778
-      16x16 tileset Update_3: 1040612098
-      16x16 tileset Update_4: 284289435
-      16x16 tileset Update_5: -1144432869
+      16x16 tileset Update_13: -525074723
+      16x16 tileset Update_12: -1253172286
       16x16 tileset Update_6: -1406045181
       16x16 tileset Update_7: -1018818869
+      16x16 tileset Update_11: 674163836
+      16x16 tileset Update_20: -1683497778
       16x16 tileset Update_8: -762045308
+      16x16 tileset Update_17: -10176991
+      16x16 tileset Update_19: -1005864698
+      16x16 tileset Update_10: 352703567
       16x16 tileset Update_9: -1662589287
+      16x16 tileset Update_4: 284289435
+      16x16 tileset Update_18: -2097021699
+      16x16 tileset Update_14: -1246537942
+      16x16 tileset Update_2: -514622939
+      16x16 tileset Update_0: -89080737
+      16x16 tileset Update_3: 1040612098
+      16x16 tileset Update_5: -1144432869
+      16x16 tileset Update_16: -1654476890
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

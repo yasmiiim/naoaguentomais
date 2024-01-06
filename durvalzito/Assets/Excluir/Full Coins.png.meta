@@ -3,7 +3,7 @@ guid: 479f8696c8f8cae4dbf0747e89da7b14
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,7 +63,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -295,14 +294,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Full Coins_0: -630363461
-      Full Coins_1: -484377630
-      Full Coins_2: -444351807
-      Full Coins_3: -1626449690
-      Full Coins_4: 437084800
       Full Coins_5: 362034445
       Full Coins_6: -1061730857
+      Full Coins_3: -1626449690
+      Full Coins_4: 437084800
+      Full Coins_2: -444351807
+      Full Coins_1: -484377630
       Full Coins_7: -1363303146
+      Full Coins_0: -630363461
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
