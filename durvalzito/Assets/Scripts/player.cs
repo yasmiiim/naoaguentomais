@@ -142,7 +142,6 @@ public class player : MonoBehaviour
     {
         health -= dmg;
         GameController.instance.UpdateLives(health);
-        anim.SetTrigger("hitt");
 
         if (transform.rotation.y == 0)
         {
