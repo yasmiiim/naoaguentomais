@@ -7,33 +7,28 @@ public class player : MonoBehaviour
 {
     public int health = 3;
     public float speed;
-    
-
     public float jumpForce;
     private bool isJumping;
     private bool doubleJump;
     private bool isAttacking;
-
     private Rigidbody2D rig;
     private Animator anim;
 
+    public AudioSource soundAtk;
+    public AudioSource soundJump;
+    public AudioSource soundRun;
 
     public Transform ataquePoint;
-
     public float ataqueRanger = 0.5f;
-
     public LayerMask enemyLayers;
-    
-    // Start is called before the first frame update
+
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        
         GameController.instance.UpdateLives(health);
     }
 
-    // Update is called once per frame
     void Update()
     {
         Jump();
@@ -56,43 +51,45 @@ public class player : MonoBehaviour
             if (!isJumping && !isAttacking)
             {
                 anim.SetInteger("transition", 1);
+                PlayRunSound();
             }
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
-        
-        if (movement < 0)
+        else if (movement < 0)
         {
             if (!isJumping && !isAttacking)
             {
                 anim.SetInteger("transition", 1);
+                PlayRunSound();
             }
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
-
-        if (movement == 0 && !isJumping && !isAttacking)
+        else if (movement == 0 && !isJumping && !isAttacking)
         {
             anim.SetInteger("transition", 0);
+            soundRun.Stop();
         }
-        
     }
 
     void Jump()
     {
-        if(Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
-            if(!isJumping)
+            if (!isJumping)
             {
                 anim.SetInteger("transition", 2);
+                PlayJumpSound();
                 rig.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
                 doubleJump = true;
                 isJumping = true;
             }
             else
             {
-                if (doubleJump )
+                if (doubleJump)
                 {
                     anim.SetInteger("transition", 2);
                     anim.SetInteger("transition", 4);
+                    PlayJumpSound();
                     rig.AddForce(new Vector2(0, jumpForce * 0.7f), ForceMode2D.Impulse);
                     doubleJump = false;
                 }
@@ -102,10 +99,10 @@ public class player : MonoBehaviour
 
     void AttackPlayer()
     {
-        StartCoroutine("attack");
+        StartCoroutine("Attack");
     }
 
-    IEnumerator attack()
+    IEnumerator Attack()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -113,17 +110,32 @@ public class player : MonoBehaviour
             {
                 isAttacking = true;
                 anim.SetInteger("transition", 3);
-                Collider2D[] hit = Physics2D.OverlapCircleAll(ataquePoint.position, ataqueRanger, enemyLayers);
+                soundAtk.Play();
 
+                Collider2D[] hit = Physics2D.OverlapCircleAll(ataquePoint.position, ataqueRanger, enemyLayers);
                 foreach (Collider2D enemy in hit)
                 {
                     enemy.GetComponent<Enemy>().DanoNoInimigo(100);
                 }
+
                 yield return new WaitForSeconds(0.5f);
                 anim.SetInteger("transition", 0);
                 isAttacking = false;
             }
         }
+    }
+
+    void PlayRunSound()
+    {
+        if (!soundRun.isPlaying)
+        {
+            soundRun.Play();
+        }
+    }
+
+    void PlayJumpSound()
+    {
+        soundJump.Play();
     }
 
     public void Damage(int dmg)
@@ -153,24 +165,22 @@ public class player : MonoBehaviour
         health += value;
         GameController.instance.UpdateLives(health);
     }
+
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.layer == 8)
         {
-            isJumping = false; 
+            isJumping = false;
         }
-        
+
         if (coll.gameObject.layer == 9)
         {
             GameController.instance.GameOver();
         }
-
     }
-    
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(ataquePoint.position, ataqueRanger);
     }
-    
-    
 }
