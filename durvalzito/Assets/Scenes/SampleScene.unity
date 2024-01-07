@@ -939,7 +939,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.9870763
+  orthographic size: 6.8683105
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1238,7 +1238,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.019824386, y: -0.9534534}
+  m_Offset: {x: -0.021398932, y: -0.9534534}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1249,7 +1249,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9852493, y: 2.0178664}
+  m_Size: {x: 0.9663573, y: 2.0178664}
   m_EdgeRadius: 0
 --- !u!4 &574555631
 Transform:
@@ -3611,7 +3611,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 29.115856, y: 12.908507}
+  m_Size: {x: 38.86441, y: 12.686109}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3625,8 +3625,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858900088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.1037, y: 5.9962, z: 0}
-  m_LocalScale: {x: 1.0761, y: 1.0761, z: 1.0761}
+  m_LocalPosition: {x: 48.08, y: 5.95, z: 0}
+  m_LocalScale: {x: 1.097084, y: 1.0970839, z: 1.0970839}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -5978,7 +5978,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.5524554
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -6064,9 +6064,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b526b1c43a386c04180205fea961d668, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e997b9ff710ac174cb388ee04fe8b55d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.59
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6074,7 +6074,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.7698121
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -7124,11 +7124,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9036258681554627573, guid: a448b10b2d27a7545a19387ff37f4bef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.82
+      value: 54.64
       objectReference: {fileID: 0}
     - target: {fileID: 9036258681554627573, guid: a448b10b2d27a7545a19387ff37f4bef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.77
+      value: 5.88
       objectReference: {fileID: 0}
     - target: {fileID: 9036258681554627573, guid: a448b10b2d27a7545a19387ff37f4bef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7319,19 +7319,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1493634780, guid: 90c380d571d7f1148b934dad34f14777, type: 3}
       propertyPath: m_Size.x
-      value: 0.31817555
+      value: 0.4601473
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493634780, guid: 90c380d571d7f1148b934dad34f14777, type: 3}
+      propertyPath: m_Size.y
+      value: 0.42338043
       objectReference: {fileID: 0}
     - target: {fileID: 1493634780, guid: 90c380d571d7f1148b934dad34f14777, type: 3}
       propertyPath: m_Offset.x
-      value: -0.00091222674
+      value: 0.0030311495
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493634780, guid: 90c380d571d7f1148b934dad34f14777, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493634780, guid: 90c380d571d7f1148b934dad34f14777, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1493634780, guid: 90c380d571d7f1148b934dad34f14777, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.32
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: 1493634780, guid: 90c380d571d7f1148b934dad34f14777, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.66
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 9146737805303223993, guid: 90c380d571d7f1148b934dad34f14777, type: 3}
       propertyPath: m_Name
@@ -7346,12 +7358,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9146737805303223996, guid: 90c380d571d7f1148b934dad34f14777, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.0604925
+      objectReference: {fileID: 0}
+    - target: {fileID: 9146737805303223996, guid: 90c380d571d7f1148b934dad34f14777, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.0604925
+      objectReference: {fileID: 0}
+    - target: {fileID: 9146737805303223996, guid: 90c380d571d7f1148b934dad34f14777, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.0604925
+      objectReference: {fileID: 0}
+    - target: {fileID: 9146737805303223996, guid: 90c380d571d7f1148b934dad34f14777, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -193.17
+      value: -192.81
       objectReference: {fileID: 0}
     - target: {fileID: 9146737805303223996, guid: 90c380d571d7f1148b934dad34f14777, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.37
+      value: 0.59
       objectReference: {fileID: 0}
     - target: {fileID: 9146737805303223996, guid: 90c380d571d7f1148b934dad34f14777, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7385,5 +7409,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9146737805303223997, guid: 90c380d571d7f1148b934dad34f14777, type: 3}
+      propertyPath: walkTime
+      value: 1.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 9146737805303223999, guid: 90c380d571d7f1148b934dad34f14777, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1677737349, guid: fd7650300c3c1934594cac4701be268e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90c380d571d7f1148b934dad34f14777, type: 3}
